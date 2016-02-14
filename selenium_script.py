@@ -20,11 +20,10 @@ def lookup(driver, query):
         try:
             button.click()
         except ElementNotVisibleException:
-            #button = driver.wait.until(EC.visiblity_of_element_located((By.NAME, "btnG")))
             button = driver.wait.until(EC.element_to_be_clickable((By.NAME, "btnG")))
             button.click()
     except TimeoutException:
-        print("Box or Button not found in googl.com")
+        print("Box or Button not found in google.com")
 
 
 if __name__ == "__main__":
